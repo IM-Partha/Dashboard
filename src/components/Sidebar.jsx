@@ -14,7 +14,7 @@ const Sidebar = ({ open }) => {
 
   return (
     <aside
-      className={`fixed top-15  md:top-0 left-0 bg-white border-r border-gray-200
+      className={`fixed top-20  md:top-0 left-0 bg-white border-r border-gray-200
     ${open ? "w-0 md:w-20" : "w-64 "}
      h-screen  overflow-y-auto
     overscroll-contain

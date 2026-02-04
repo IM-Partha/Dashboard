@@ -19,7 +19,7 @@ const Header = ({ open, setOpen }) => {
   return (
     <>
       {/* MAIN HEADER */}
-      <header className="top-0 left-0 w-full py-1 bg-white shadow z-50">
+      <header className="top-0 left-0 w-full py-1 bg-white shadow z-500">
         <nav className="flex items-center justify-between gap-4 px-4 py-3">
           {/* LEFT */}
           <div className="flex items-center gap-5">
@@ -151,7 +151,7 @@ const Header = ({ open, setOpen }) => {
       <div
         className={`${
           profile && profilebar ? "block" : "hidden"
-        } md:hidden absolute top-[140px] right-2 bg-white shadow-lg py-5 px-4 rounded-2xl w-64`}
+        } md:hidden absolute top-[140px] z-40 right-2 bg-white shadow-lg py-5 px-4 rounded-2xl w-64`}
       >
         <ProfileContent />
       </div>
