@@ -9,7 +9,7 @@ import {
   IoSettingsOutline,
 } from "react-icons/io5";
 import { MdOutlineClose } from "react-icons/md";
-import LOGO from '../images/logo.png'
+import LOGO from "../images/logo.png";
 import "./Style.css";
 
 const Header = ({ open, setOpen }) => {
@@ -26,15 +26,19 @@ const Header = ({ open, setOpen }) => {
             {/* Mobile menu */}
             <div className="md:hidden">
               {open ? (
-                < CgMenuLeftAlt
-                  onClick={() => setOpen(false)}
-                  className="text-2xl cursor-pointer"
-                />
+                <div className="border w-10 h-10  flex justify-center items-center rounded-lg border-gray-200">
+                  <CgMenuLeftAlt
+                    onClick={() => setOpen(false)}
+                    className="text-2xl cursor-pointer text-gray-500"
+                  />
+                </div>
               ) : (
-                <MdOutlineClose
-                  onClick={() => setOpen(true)}
-                  className="text-2xl cursor-pointer"
-                />
+                <div className="border w-10 h-10  flex justify-center items-center rounded-lg border-gray-200 bg-gray-100">
+                  <MdOutlineClose
+                    onClick={() => setOpen(true)}
+                    className="text-2xl cursor-pointer"
+                  />
+                </div>
               )}
             </div>
 
@@ -60,8 +64,8 @@ const Header = ({ open, setOpen }) => {
           {/* center Text */}
           <div>
             <div className="flex justify-center items-center gap-1 md:hidden">
-              <img className="h-10 w-10" src={LOGO}/>
-              <span>Dashboard</span>
+              <img className="h-10 w-10" src={LOGO} />
+              <span className="font-normal">Dashboard</span>
             </div>
           </div>
           {/* center Text */}
@@ -76,7 +80,7 @@ const Header = ({ open, setOpen }) => {
 
             <div className="flex items-center gap-2 cursor-pointer">
               <CgProfile className="text-2xl" />
-              <span onClick={() => setProfile(prev => !prev)}>Partha</span>
+              <span onClick={() => setProfile((prev) => !prev)}>Partha</span>
               <IoIosArrowUp
                 className={`transition duration-300 ${
                   profile ? "rotate-180" : "rotate-0"
@@ -89,7 +93,7 @@ const Header = ({ open, setOpen }) => {
           <div className="block md:hidden">
             <IoEllipsisHorizontal
               onClick={() => {
-                setProfilebar(prev => !prev);
+                setProfilebar((prev) => !prev);
                 setProfile(false);
               }}
               className="text-2xl cursor-pointer"
@@ -118,7 +122,7 @@ const Header = ({ open, setOpen }) => {
             <CgProfile className="text-2xl" />
             <span
               onClick={() => {
-                setProfile(prev => !prev);
+                setProfile((prev) => !prev);
                 setProfilebar(true);
               }}
               className="cursor-pointer"
@@ -158,9 +162,7 @@ const Header = ({ open, setOpen }) => {
 const ProfileContent = () => (
   <>
     <div className="mb-4">
-      <p className="text-[16px] font-medium text-[#344054]">
-        Partha Debnath
-      </p>
+      <p className="text-[16px] font-medium text-[#344054]">Partha Debnath</p>
       <span className="text-[14px] text-[#667085]">
         parthadebnath161@gmail.com
       </span>
